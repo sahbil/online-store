@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { JhiEventManager, JhiDataUtils } from 'ng-jhipster';
+import { JhiDataUtils, JhiEventManager } from 'ng-jhipster';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { IProduct } from 'app/shared/model/product.model';
@@ -19,6 +19,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   products?: IProduct[];
   eventSubscriber?: Subscription;
   totalItems = 0;
+  filter: string;
   itemsPerPage = ITEMS_PER_PAGE;
   page!: number;
   predicate!: string;
