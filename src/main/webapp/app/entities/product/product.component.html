@@ -63,7 +63,7 @@
                                 </a>
                                 <small *ngIf="product.productCategory">
                                     <a [routerLink]="['/product-category', product .productCategory?.id, 'view']">
-                                        Category: {{ product.productCategory?.id }} </a>
+                                        Category: {{ product.productCategory?.name }} </a>
                                 </small>
                             </div>
                             <small class="mb-1">{{ product.description }}</small>
