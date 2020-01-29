@@ -19,7 +19,6 @@ export class ProductComponent implements OnInit, OnDestroy {
   products?: IProduct[];
   eventSubscriber?: Subscription;
   totalItems = 0;
-  filter: string;
   itemsPerPage = ITEMS_PER_PAGE;
   page!: number;
   predicate!: string;
